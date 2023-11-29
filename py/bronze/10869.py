@@ -1,0 +1,6 @@
+A, B = input().split()
+A = int(A)
+B = int(B)
+c = (A / B)
+c = int(c)
+print(f'{A + B}\n{A - B}\n{int(A * B)}\n{c}\n{A % B}')
