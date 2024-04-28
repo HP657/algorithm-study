@@ -14,22 +14,24 @@ int main() {
     int dy[4] = {0, 1, 0, -1};
 
     int arr[n][m];
-    bool visited[n][m] = {false};
+    bool arr2[n][m];
+
+    
+    queue<pair<int, int>> q;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cin >> arr[i][j];
-            visited[i][j] = false; 
+            arr2[i][j] = 0;
         }
     }
 
     int cnt = 0, mx = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (arr[i][j] == 1 && !visited[i][j]) {
+            if (arr[i][j] == 1 && !arr2[i][j]) {
                 cnt++;
-                queue<pair<int, int>> q;
-                visited[i][j] = true;
+                arr2[i][j] = 1;
                 q.push({i, j});
                 int area = 0;
                 while (!q.empty()) {
@@ -39,10 +41,10 @@ int main() {
                     for (int k = 0; k < 4; k++) {
                         int x = cur.first + dx[k];
                         int y = cur.second + dy[k];
-                        if (x < 0 || x >= n || y < 0 || y >= m || visited[x][y] || arr[x][y] != 1) {
+                        if (x < 0 || x >= n || y < 0 || y >= m || arr2[x][y] || arr[x][y] != 1) {
                             continue;
                         }
-                        visited[x][y] = true;
+                        arr2[x][y] = 1;
                         q.push({x, y});
                     }
                 }
