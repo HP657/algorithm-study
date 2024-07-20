@@ -14,7 +14,7 @@ queue<pair<int, int>> Q;
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    cin >> n >> m, k;
+    cin >> n >> m >> k;
 
     for (int i = 0; i < k; i++) {
         int x1, y1, x2, y2;
@@ -23,6 +23,12 @@ int main() {
             for (int l = y1; l < y2; l++) {
                 board[j][l] = 1;
             }
+        }
+        for (int j = x1; j < x2; j++) {
+            for (int l = y1; l < y2; l++) {
+                cout << board[j][l] << ' ';
+            }
+            cout << '\n';
         }
     }
     int cnt = 0;
