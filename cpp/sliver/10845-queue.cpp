@@ -9,13 +9,13 @@ int main() {
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        string qq;
+        string l;
         int m;
-        cin >> qq;
-        if (qq == "push") {
+        cin >> l;
+        if (l == "push") {
             cin >> m;
             q.push(m);
-        } else if (qq == "pop") {
+        } else if (l == "pop") {
             if (q.empty()) {
                 cout << -1;
             } else {
@@ -23,20 +23,20 @@ int main() {
                 q.pop();
             }
             cout << '\n';
-        } else if (qq == "size") {
+        } else if (l == "size") {
             cout << q.size();
             cout << '\n';
-        } else if (qq == "empty") {
+        } else if (l == "empty") {
             cout << q.empty();
             cout << '\n';
-        } else if (qq == "front") {
+        } else if (l == "front") {
             if (q.empty()) {
                 cout << -1;
             } else {
                 cout << q.front();
             }
             cout << '\n';
-        } else if (qq == "back") {
+        } else if (l == "back") {
             if (q.empty()) {
                 cout << -1;
             } else {
