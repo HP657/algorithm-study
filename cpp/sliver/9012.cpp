@@ -11,20 +11,19 @@ int main() {
     stack<char> s;
 
     for (int i = 0; i < n; i++) {
-        string q;
-        cin >> q;
+        string l;
+        cin >> l;
         bool m = true;
-        for (int j = 0; j < q.length(); j++) {
-            char c = q[j];
+        for (int j = 0; j < l.length(); j++) {
+            char c = l[j];
             if (c == '(')
                 s.push(c);
             else if (c == ')') {
-                if (s.empty() || (c == ')' && s.top() != '(')) {
+                if (s.empty() || s.top() != '(') {
                     m = false;
                     break;
-                } else {
-                    s.pop();
                 }
+                s.pop();
             }
         }
 
