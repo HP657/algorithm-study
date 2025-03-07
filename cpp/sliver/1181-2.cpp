@@ -1,14 +1,12 @@
 #include <iostream>
 #include <vector>
-#include <string>
 #include <algorithm>
 using namespace std;
 
 bool sol(string a, string b) {
 	if (a.length() == b.length()) {
 		return a < b;
-	}
-	else {
+	} else {
 		return a.length() < b.length();
 	}
 }
