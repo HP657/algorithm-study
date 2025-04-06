@@ -28,19 +28,14 @@ vector<int> merge(vector<int>& left, vector<int>& right) {
 
     for (int i = 0; i < temp.size(); i++) {
         count++;
-        if (count == K) {
-            cout << temp[i];
-            return;
-        };
+        if (count == K) result = temp[i];
     }
 
     return temp;
 }
 
 vector<int> mergeSort(vector<int>& arr, int start, int end) {
-    if (start == end) {
-        return {arr[start]};
-    };
+    if (start == end) return {arr[start]};
 
     int mid = (start + end) / 2;
     vector<int> left = mergeSort(arr, start, mid);
@@ -59,6 +54,8 @@ int main() {
     }
 
     mergeSort(arr, 0, N - 1);
+
+    cout << result;
 
     return 0;
 }
