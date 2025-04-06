@@ -28,7 +28,9 @@ vector<int> merge(vector<int>& left, vector<int>& right) {
 
     for (int i = 0; i < temp.size(); i++) {
         count++;
-        if (count == K) result = temp[i];
+        if (count == K) {
+            result = temp[i];
+        }
     }
 
     return temp;
