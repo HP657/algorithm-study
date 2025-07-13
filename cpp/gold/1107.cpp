@@ -26,8 +26,8 @@ int main() {
 
     int cnt = abs(channel - N);
 
-    for (int i = 0; i <= 1e6; i++) {
-        if (btn_set(i) == true) {
+    for (int i = 0; i <= 1e6; i++) { // 10^6
+        if (btn_set(i)) {
             int second_cnt = abs(N - i) + to_string(i).length();
             cnt = min(cnt, second_cnt);
         }
