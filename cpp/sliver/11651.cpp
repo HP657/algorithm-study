@@ -4,12 +4,9 @@
 using namespace std;
 
 bool compare(pair<int, int> a, pair<int, int> b) {
-    if (a.second == b.second) {
-        return a.first < b.first;
-    }
-    return a.second < b.second;
-    
+    return a.second == b.second ? a.first < b.first : a.second < b.second;
 }
+
 int main() {
     int n; cin >> n;
     vector<pair<int, int>> v;
