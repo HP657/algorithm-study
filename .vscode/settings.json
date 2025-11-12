@@ -5,6 +5,7 @@
         "string": "cpp",
         "format": "cpp",
         "algorithm": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "map": "cpp"
     }
 }
