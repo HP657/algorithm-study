@@ -18,7 +18,7 @@ int main() {
         }
         
         if (sum % 10 == 0) {
-			cout << str[loc];
+			cout << s[loc];
             break;
         }
     }
